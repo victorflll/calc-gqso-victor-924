@@ -6,7 +6,7 @@ import io.jooby.annotations.*;
 public class Controller {
 
   @GET
-  public String sayHi() {
-    return "Welcome to Jooby!";
+  public String welcome() {
+    return "Welcome to Calculator API!";
   }
 }
