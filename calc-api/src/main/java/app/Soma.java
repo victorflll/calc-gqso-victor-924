@@ -12,7 +12,23 @@ public class Soma {
 
             return String.format("%.2f", sum);
         } catch (NumberFormatException nfe) {
-            throw new BadRequestException(String.format("Parâmetro inválido."));
+
+            if(isInvalid(a) && isInvalid(b) == false){
+                throw new BadRequestException(String.format("Parâmetro inválido: %s", a));
+            } else if(isInvalid(a) == false && isInvalid(b)){
+                throw new BadRequestException(String.format("Parâmetro inválido: %s", b));
+            } 
+
+            throw new BadRequestException(String.format("Parâmetros inválidos: %s e %s.", a, b));
+        }
+    }
+
+    private Boolean isInvalid(String x){
+        try{
+            Double.parseDouble(x);
+            return false;
+        }catch(NumberFormatException nfe){
+            return true;
         }
     }
 }
