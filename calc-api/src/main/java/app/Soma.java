@@ -23,9 +23,9 @@ public class Soma {
         }
     }
 
-    private Boolean isInvalid(String x){
+    private Boolean isInvalid(String number){
         try{
-            Double.parseDouble(x);
+            Double.parseDouble(number);
             return false;
         }catch(NumberFormatException nfe){
             return true;
