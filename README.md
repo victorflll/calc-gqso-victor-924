@@ -1,3 +1,12 @@
-# Projeto Calculadora (IFAL - 924)
+# calc-api
 
-Projeto geral da disciplina de Gestão e Qualidade de Software (GQSO) que visa a criação da API de uma calculadora.
+Welcome to calc-api!!
+
+## running
+
+    mvn clean jooby:run
+
+## building
+
+    mvn clean package
+
